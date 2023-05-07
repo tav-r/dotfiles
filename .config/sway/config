@@ -1,0 +1,194 @@
+set $background ~/.config/sway/assets/wp.jpg
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+set $lock swaylock --image $HOME/.config/sway/assets/wp.jpg
+set $term alacritty -e distrobox enter archlinux
+# set $term kitty -c $HOME/.config/kitty/kitty.conf distrobox enter archlinux
+set $adminterm alacritty --config-file $HOME/.config/alacritty-admin.yml
+# set $adminterm kitty -c $HOME/.config/kitty/kitty-admin.conf
+set $ubuntuterm alacritty --config-file $HOME/.config/alacritty-ubuntu.yml -e distrobox enter ubuntu
+# set $ubuntuterm kitty -c $HOME/.config/kitty/kitty-ubuntu.conf distrobox enter ubuntu
+set $menu 'PATH=/home/tav/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/home/tav/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/lib/jvm/default/bin rofi -combi-modi window,run -show combi -theme .config/rofi/launcher.rasi'
+set $day ln -sf ~/.config/sway/assets/wp-day.jpg ~/.config/sway/assets/wp.jpg && ln -sf ~/.config/waybar/style-day.css ~/.config/waybar/style.css && ln -sf ~/.config/alacritty-day.yml ~/.config/alacritty.yml && swaymsg "reload"
+# set $day ln -sf ~/.config/sway/assets/wp-day.jpg ~/.config/sway/assets/wp.jpg && ln -sf ~/.config/waybar/style-day.css ~/.config/waybar/style.css && ln -sf ~/.config/kitty/kitty-day.conf ~/.config/kitty/kitty.conf && swaymsg "reload"
+set $night ln -sf ~/.config/sway/assets/wp-night.jpg ~/.config/sway/assets/wp.jpg && ln -sf ~/.config/waybar/style-night.css ~/.config/waybar/style.css && ln -sf ~/.config/alacritty-night.yml ~/.config/alacritty.yml && swaymsg "reload"
+# set $night ln -sf ~/.config/sway/assets/wp-night.jpg ~/.config/sway/assets/wp.jpg && ln -sf ~/.config/waybar/style-night.css ~/.config/waybar/style.css && ln -sf ~/.config/kitty/kitty-night.conf ~/.config/kitty/kitty.conf && swaymsg "reload"
+
+output * bg $background fill
+input * {
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
+    xkb_layout "ch"
+}
+
+bindsym $mod+Return exec $term
+bindsym $mod+Control+Return exec $adminterm
+bindsym $mod+u exec $ubuntuterm
+bindsym $mod+i exec $kaliterm
+
+bindsym $mod+d exec $menu
+
+floating_modifier $mod normal
+
+bindsym $mod+Shift+c reload
+
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+bindsym $mod+b splith
+bindsym $mod+v splitv
+
+bindsym $mod+Shift+q kill
+
+# Switch the current container between different layout styles
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Make the current focus fullscreen
+bindsym $mod+f fullscreen
+
+# Toggle the current focus between tiling and floating mode
+bindsym $mod+Shift+space floating toggle
+
+# Swap focus between the tiling area and the floating area
+bindsym $mod+space focus mode_toggle
+
+# Move focus to the parent container
+bindsym $mod+a focus parent
+
+# Scratchpad:
+#
+# Sway has a "scratchpad", which is a bag of holding for windows.
+# You can send windows there and get them back later.
+
+# Move the currently focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+minus scratchpad show
+#
+# Resizing containers:
+#
+mode "resize" {
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
+
+    # Ditto, with arrow keys
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+bindsym $mod+Control+l exec $lock
+# bindsym $mod+Alt+l exec swaylock -i $background & sleep 1 && systemctl suspend
+
+#
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+    swaybar_command waybar
+}
+
+# class                 border  backgr. text    indicator child_border
+client.focused           #1e2127 #1e2127 #be5046 #1e2127 #1e2127
+client.unfocused         #1e2127 #1e2127 #ffffff #1e2127 #1e2127
+client.focused_inactive  #1e2127 #1e2127 #ffffff #1e2127 #1e2127
+
+for_window [app_id="^.*"] border pixel 8
+for_window [class="^.*"] border pixel 8
+
+for_window [app_id="^Alacritty$"] border none
+for_window [app_id="^kitty$"] border none
+for_window [class="^vlc$"] floating enable
+for_window [class="^.*Cryptomator.*$"] floating enable
+
+gaps inner 10
+gaps bottom 8
+gaps top 8
+gaps right 6
+gaps left 6
+
+
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86Search exec $menu
+
+bindsym $mod+Shift+d exec $day
+bindsym $mod+Shift+n exec $night
+bindsym $mod+Control+b exec wl-paste | base64 | tr -d '\n' | wl-copy
+bindsym $mod+Shift+b exec wl-paste | base64 -d | tr -d '\n' | wl-copy
+bindsym $mod+Control+u exec wl-paste | python -c "import urllib.parse; print(urllib.parse.quote(input()), end='')" | tr -d '\n' | wl-copy
+bindsym $mod+Shift+u exec wl-paste | python -c "import urllib.parse; print(urllib.parse.unquote(input()), end='')" | tr -d '\n' | wl-copy
+
+bindsym $mod+Shift+s sticky toggle
+
+bindsym Print exec grim
+
+include /etc/sway/config.d/*
+
