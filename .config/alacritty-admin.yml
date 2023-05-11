@@ -606,7 +606,7 @@ colors:
   name: Red Phoenix
   author: dkeg
   primary:
-    background: "#cc2225"
+    background: "#590911"
     foreground: "#ffffff"
   cursor:
     text: "#111111"
