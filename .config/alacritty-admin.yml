@@ -110,7 +110,7 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     #family: JetBrainsMono
-    family: Fira Code
+    family: FiraCode Nerd Font
     #family: Consolas Ligaturized
 
     # The `style` can be specified to pick a specific face.
@@ -122,7 +122,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Fira Code
+    family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -133,10 +133,10 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrainsMono
+    family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    family: Fira Code
+    style: Italic
 
   # Bold italic font face
   #bold_italic:
@@ -144,10 +144,10 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrainsMono
+    # family: JetBrainsMono
 
     # The `style` can be specified to pick a specific face.
-    family: Fira Code
+    # family: Fira Code
 
   # Point size
   size: 12.0
@@ -602,31 +602,32 @@ key_bindings:
   #- { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
   #- { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
   #
+# Colors (Tokyo Night)
+# Source: https://github.com/zatchheems/tokyo-night-alacritty-theme
 colors:
-  name: Red Phoenix
-  author: dkeg
+  # Default colors
   primary:
-    background: "#590911"
-    foreground: "#ffffff"
-  cursor:
-    text: "#111111"
-    cursor: "#ffffff"
-  normal:
-    black: "#131313"
-    red: "#2d2d2d"
-    green: "#4c3a3d"
-    yellow: "#4e4e4e"
-    blue: "#6f6f6f"
-    magenta: "#909090"
-    cyan: "#aaa998"
-    white: "#b1b1b1"
-  bright:
-    black: "#d1d1d1"
-    red: "#d2c3ad"
-    green: "#df9767"
-    yellow: "#e1e1e1"
-    blue: "#ededed"
-    magenta: "#ed4b19"
-    cyan: "#f2361e"
-    white: "#fa390f"
+    background: '0x1a1b26'
+    foreground: '0xa9b1d6'
 
+  # Normal colors
+  normal:
+    black:   '0x32344a'
+    red:     '0xf7768e'
+    green:   '0x9ece6a'
+    yellow:  '0xe0af68'
+    blue:    '0x7aa2f7'
+    magenta: '0xad8ee6'
+    cyan:    '0x449dab'
+    white:   '0x787c99'
+
+  # Bright colors
+  bright:
+    black:   '0x444b6a'
+    red:     '0xff7a93'
+    green:   '0xb9f27c'
+    yellow:  '0xff9e64'
+    blue:    '0x7da6ff'
+    magenta: '0xbb9af7'
+    cyan:    '0x0db9d7'
+    white:   '0xacb0d0'

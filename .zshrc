@@ -63,6 +63,10 @@ if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
+if which starship > /dev/null; then
+    eval "$(starship init zsh)"
+fi
+
 export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH:$HOME/.local/bin

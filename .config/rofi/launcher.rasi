@@ -9,7 +9,7 @@
 
 configuration {
 	modi: 						"drun";
-	icon-theme: 				"Papirus-Dark";
+	icon-theme: 				"Arc";
 	application-fallback-icon: 	"Adwaita";
     show-icons:                 true;
 	drun-display-format:        "{name}";

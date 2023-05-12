@@ -5,13 +5,13 @@ set $down j
 set $up k
 set $right l
 set $lock swaylock --image $HOME/.config/sway/assets/wp.jpg
-set $term alacritty -e distrobox enter archlinux
+set $archterm alacritty -e distrobox enter archlinux
 # set $term kitty -c $HOME/.config/kitty/kitty.conf distrobox enter archlinux
-set $adminterm alacritty --config-file $HOME/.config/alacritty-admin.yml
+set $term alacritty --config-file $HOME/.config/alacritty-admin.yml
 # set $adminterm kitty -c $HOME/.config/kitty/kitty-admin.conf
-set $ubuntuterm alacritty --config-file $HOME/.config/alacritty-ubuntu.yml -e distrobox enter ubuntu
+set $ubuntuterm alacritty --config-file $HOME/.config/alacritty-ubuntu.yml -e distrobox enter ubuntu-latest
 # set $ubuntuterm kitty -c $HOME/.config/kitty/kitty-ubuntu.conf distrobox enter ubuntu
-set $menu 'PATH=/home/tav/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/home/tav/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/lib/jvm/default/bin rofi -combi-modi window,run -show combi -theme .config/rofi/launcher.rasi'
+set $menu 'PATH=/home/tav/.nix-profile/bin:/home/tav/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/home/tav/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/lib/jvm/default/bin rofi -combi-modi window,run -show combi -theme .config/rofi/launcher.rasi'
 set $day ln -sf ~/.config/sway/assets/wp-day.jpg ~/.config/sway/assets/wp.jpg && ln -sf ~/.config/waybar/style-day.css ~/.config/waybar/style.css && ln -sf ~/.config/alacritty-day.yml ~/.config/alacritty.yml && swaymsg "reload"
 # set $day ln -sf ~/.config/sway/assets/wp-day.jpg ~/.config/sway/assets/wp.jpg && ln -sf ~/.config/waybar/style-day.css ~/.config/waybar/style.css && ln -sf ~/.config/kitty/kitty-day.conf ~/.config/kitty/kitty.conf && swaymsg "reload"
 set $night ln -sf ~/.config/sway/assets/wp-night.jpg ~/.config/sway/assets/wp.jpg && ln -sf ~/.config/waybar/style-night.css ~/.config/waybar/style.css && ln -sf ~/.config/alacritty-night.yml ~/.config/alacritty.yml && swaymsg "reload"
@@ -27,7 +27,7 @@ input * {
 }
 
 bindsym $mod+Return exec $term
-bindsym $mod+Control+Return exec $adminterm
+bindsym $mod+Control+Return exec $archterm
 bindsym $mod+u exec $ubuntuterm
 bindsym $mod+i exec $kaliterm
 
