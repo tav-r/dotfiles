@@ -181,10 +181,10 @@ bindsym XF86Search exec $menu
 
 bindsym $mod+Shift+d exec $day
 bindsym $mod+Shift+n exec $night
-bindsym $mod+Control+b exec wl-paste | base64 | tr -d '\n' | wl-copy
-bindsym $mod+Shift+b exec wl-paste | base64 -d | tr -d '\n' | wl-copy
-bindsym $mod+Control+u exec wl-paste | python -c "import urllib.parse; print(urllib.parse.quote(input()), end='')" | tr -d '\n' | wl-copy
-bindsym $mod+Shift+u exec wl-paste | python -c "import urllib.parse; print(urllib.parse.unquote(input()), end='')" | tr -d '\n' | wl-copy
+bindsym Control+Alt+b exec wl-paste | base64 | tr -d '\n' | wl-copy
+bindsym Control+Alt+Shift+b exec wl-paste | base64 -d | tr -d '\n' | wl-copy
+bindsym Control+Alt+u exec wl-paste | python -c "import urllib.parse; print(urllib.parse.quote(input()), end='')" | tr -d '\n' | wl-copy
+bindsym Control+Alt+Shift+u exec wl-paste | python -c "import urllib.parse; print(urllib.parse.unquote(input()), end='')" | tr -d '\n' | wl-copy
 
 bindsym $mod+Shift+s sticky toggle
 
