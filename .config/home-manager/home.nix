@@ -66,6 +66,7 @@
     ".config/waybar/style-night.css".source = ~/dotfiles/.config/waybar/style-night.css;
     ".config/waybar/style.css".source = ~/dotfiles/.config/waybar/style.css;
     ".config/starship.toml".source = ~/dotfiles/.config/starship.toml;
+    ".config/fontconfig/fonts.conf".source = ~/dotfiles/.config/fontconfig/fonts.conf;
     ".zshrc".source = ~/dotfiles/.zshrc;
   };
 
