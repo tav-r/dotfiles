@@ -43,6 +43,8 @@
     pkgs.tor
     pkgs.torsocks
     pkgs.tor-browser-bundle-bin
+    pkgs.proxychains-ng
+    pkgs.restic
   ];
 
 

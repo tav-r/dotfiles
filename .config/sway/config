@@ -160,6 +160,8 @@ for_window [app_id="^Alacritty$"] border none
 for_window [app_id="^kitty$"] border none
 for_window [class="^vlc$"] floating enable
 for_window [class="^.*Cryptomator.*$"] floating enable
+for_window [title="^Picture-in-Picture$" app_id="firefox"] floating enable
+for_window [title="^Picture-in-Picture$" app_id="firefox"] border none
 
 gaps inner 10
 gaps bottom 8
