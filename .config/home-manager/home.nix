@@ -45,6 +45,11 @@
     pkgs.tor-browser-bundle-bin
     pkgs.proxychains-ng
     pkgs.restic
+    pkgs.bluez
+    pkgs.youtube-dl
+    pkgs.fd
+    pkgs.zoxide
+    pkgs.tealdeer
   ];
 
 

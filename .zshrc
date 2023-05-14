@@ -67,6 +67,10 @@ if which starship > /dev/null; then
     eval "$(starship init zsh)"
 fi
 
+if which zoxide > /dev/null; then
+    eval "$(zoxide init zsh)"
+fi
+
 export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH:$HOME/.local/bin
