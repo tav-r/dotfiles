@@ -34,7 +34,7 @@
     pkgs.stack
     pkgs.bat
     pkgs.exa
-    pkgs.libreoffice
+    pkgs.libreoffice-fresh
     pkgs.starship
     pkgs.btop
     pkgs.jq
@@ -63,6 +63,7 @@
     ".config/containers/registries.conf".source = ~/dotfiles/.config/containers/registries.conf;
     ".config/containers/storage.conf".source = ~/dotfiles/.config/containers/storage.conf;
     ".config/helix/languages.toml".source = ~/dotfiles/.config/helix/languages.toml;
+    ".config/helix/config.toml".source = ~/dotfiles/.config/helix/config.toml;
     ".config/rofi/launcher.rasi".source = ~/dotfiles/.config/rofi/launcher.rasi;
     ".config/sway/assets/wp-day.jpg".source = ~/dotfiles/.config/sway/assets/wp-day.jpg;
     ".config/sway/assets/wp-night.jpg".source = ~/dotfiles/.config/sway/assets/wp-night.jpg;
