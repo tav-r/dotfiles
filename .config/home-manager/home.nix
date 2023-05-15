@@ -50,6 +50,8 @@
     pkgs.fd
     pkgs.zoxide
     pkgs.tealdeer
+    pkgs.evince
+    pkgs.python311Packages.python-lsp-server
   ];
 
 
