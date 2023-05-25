@@ -52,6 +52,12 @@
     pkgs.tealdeer
     pkgs.evince
     pkgs.python311Packages.python-lsp-server
+    pkgs.python311Packages.autopep8
+    pkgs.obsidian
+    pkgs.go
+    pkgs.burpsuite
+    pkgs.whois
+    pkgs.dig
   ];
 
 
