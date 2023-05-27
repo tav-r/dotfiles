@@ -85,6 +85,7 @@
     ".config/waybar/style.css".source = ~/dotfiles/.config/waybar/style.css;
     ".config/starship.toml".source = ~/dotfiles/.config/starship.toml;
     ".config/fontconfig/fonts.conf".source = ~/dotfiles/.config/fontconfig/fonts.conf;
+    ".config/environment.d/xdg.conf".source = ~/dotfiles/.config/environment.d/xdg.conf;
     ".zshrc".source = ~/dotfiles/.zshrc;
   };
 
