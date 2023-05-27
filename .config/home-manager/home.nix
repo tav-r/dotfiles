@@ -55,9 +55,10 @@
     pkgs.python311Packages.autopep8
     pkgs.obsidian
     pkgs.go
-    pkgs.burpsuite
-    pkgs.whois
     pkgs.dig
+    pkgs.wget
+    pkgs.inetutils
+    pkgs.exiftool
   ];
 
 
