@@ -59,6 +59,7 @@
     pkgs.wget
     pkgs.inetutils
     pkgs.exiftool
+    pkgs.agda
   ];
 
 
