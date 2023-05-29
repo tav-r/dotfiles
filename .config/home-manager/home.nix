@@ -60,6 +60,7 @@
     pkgs.inetutils
     pkgs.exiftool
     pkgs.agda
+    pkgs.lapce
   ];
 
 
