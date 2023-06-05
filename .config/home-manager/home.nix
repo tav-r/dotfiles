@@ -61,6 +61,8 @@
     pkgs.exiftool
     pkgs.agda
     pkgs.lapce
+    pkgs.gimp
+    pkgs.wf-recorder
   ];
 
 
