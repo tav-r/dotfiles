@@ -63,6 +63,10 @@
     pkgs.lapce
     pkgs.gimp
     pkgs.wf-recorder
+    pkgs.dosfstools
+    pkgs.arp-scan
+    pkgs.mosh
+    pkgs.keepassxc
   ];
 
 
