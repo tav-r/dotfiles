@@ -30,7 +30,6 @@
     pkgs.unzip
     pkgs.spotify
     pkgs.nmap
-    pkgs.ffuf
     pkgs.stack
     pkgs.bat
     pkgs.exa
@@ -67,6 +66,7 @@
     pkgs.arp-scan
     pkgs.mosh
     pkgs.keepassxc
+    pkgs.jdk
   ];
 
 
