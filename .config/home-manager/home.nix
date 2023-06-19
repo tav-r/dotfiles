@@ -58,7 +58,7 @@
     pkgs.wget
     pkgs.inetutils
     pkgs.exiftool
-    pkgs.agda
+    (pkgs.agda.withPackages (p: [ p.standard-library ]))
     pkgs.lapce
     pkgs.gimp
     pkgs.wf-recorder
@@ -68,7 +68,6 @@
     pkgs.keepassxc
     pkgs.jdk
   ];
-
 
   home.file = {
     ".config/alacritty-admin.yml".source = ~/dotfiles/.config/alacritty-admin.yml;
