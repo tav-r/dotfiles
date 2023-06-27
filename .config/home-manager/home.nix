@@ -67,6 +67,8 @@
     pkgs.mosh
     pkgs.keepassxc
     pkgs.jdk
+    pkgs.emacs
+    pkgs.azure-cli
   ];
 
   home.file = {
