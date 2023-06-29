@@ -1,12 +1,12 @@
  * {
-    font-weight: 700;
+    font-weight: 800;
     font-family: "Hack Nerd Font Regular";
-    font-size: 13px;
+    font-size: 14px;
   }
   
   #waybar {
     opacity: 1.0;
-    background-color: #1c1c1c;
+    background-color: #100f14;
     border-radius: 16px;
   }
   
