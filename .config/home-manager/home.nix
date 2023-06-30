@@ -59,16 +59,14 @@
     pkgs.inetutils
     pkgs.exiftool
     (pkgs.agda.withPackages (p: [ p.standard-library ]))
-    pkgs.lapce
     pkgs.gimp
-    pkgs.wf-recorder
     pkgs.dosfstools
     pkgs.arp-scan
     pkgs.mosh
-    pkgs.keepassxc
     pkgs.jdk
     pkgs.emacs
     pkgs.azure-cli
+    pkgs.texlive.combined.scheme-full
   ];
 
   home.file = {
