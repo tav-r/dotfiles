@@ -67,6 +67,7 @@
     pkgs.emacs
     pkgs.azure-cli
     pkgs.texlive.combined.scheme-full
+    pkgs.tuba
   ];
 
   home.file = {
@@ -93,6 +94,7 @@
     ".config/fontconfig/fonts.conf".source = ~/dotfiles/.config/fontconfig/fonts.conf;
     ".config/environment.d/xdg.conf".source = ~/dotfiles/.config/environment.d/xdg.conf;
     ".zshrc".source = ~/dotfiles/.zshrc;
+    ".vimrc".source = ~/dotfiles/.vimrc;
   };
 
   programs.home-manager.enable = true;
