@@ -30,7 +30,6 @@
     pkgs.unzip
     pkgs.spotify
     pkgs.nmap
-    pkgs.stack
     pkgs.bat
     pkgs.exa
     pkgs.libreoffice-fresh
@@ -65,9 +64,12 @@
     pkgs.mosh
     pkgs.jdk
     pkgs.emacs
-    pkgs.azure-cli
     pkgs.texlive.combined.scheme-full
     pkgs.tuba
+    pkgs.coq
+    pkgs.coqPackages.coqide
+    pkgs.system-config-printer
+    pkgs.exploitdb
   ];
 
   home.file = {
