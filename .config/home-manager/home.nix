@@ -70,6 +70,8 @@
     pkgs.coqPackages.coqide
     pkgs.system-config-printer
     pkgs.exploitdb
+    pkgs.alloy6
+    pkgs.idris2
   ];
 
   home.file = {
