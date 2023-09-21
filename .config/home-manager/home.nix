@@ -72,6 +72,10 @@
     pkgs.exploitdb
     pkgs.alloy6
     pkgs.idris2
+    pkgs.websocat
+    pkgs.gost
+    pkgs.cloudflared
+    pkgs.codeql
   ];
 
   home.file = {
