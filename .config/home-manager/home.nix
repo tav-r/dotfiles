@@ -31,7 +31,7 @@
     pkgs.spotify
     pkgs.nmap
     pkgs.bat
-    pkgs.exa
+    pkgs.eza
     pkgs.libreoffice-fresh
     pkgs.starship
     pkgs.btop
