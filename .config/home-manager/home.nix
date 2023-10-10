@@ -76,6 +76,8 @@
     pkgs.gost
     pkgs.cloudflared
     pkgs.codeql
+    pkgs.aria
+    pkgs.gef
   ];
 
   home.file = {
