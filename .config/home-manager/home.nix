@@ -78,6 +78,12 @@
     pkgs.codeql
     pkgs.aria
     pkgs.gef
+    pkgs.ghidra
+    pkgs.radare2
+    pkgs.remmina
+    pkgs.gajim
+    pkgs.pan
+    pkgs.imagemagick
   ];
 
   home.file = {
