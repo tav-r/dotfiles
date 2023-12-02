@@ -28,8 +28,10 @@
     pkgs.telegram-desktop
     pkgs.discord
     pkgs.unzip
+    pkgs.zip
     pkgs.spotify
     pkgs.nmap
+    pkgs.masscan
     pkgs.bat
     pkgs.eza
     pkgs.libreoffice-fresh
@@ -49,8 +51,6 @@
     pkgs.zoxide
     pkgs.tealdeer
     pkgs.evince
-    pkgs.python311Packages.python-lsp-server
-    pkgs.python311Packages.autopep8
     pkgs.obsidian
     pkgs.go
     pkgs.dig
@@ -72,18 +72,16 @@
     pkgs.exploitdb
     pkgs.alloy6
     pkgs.idris2
+    pkgs.vimPlugins.idris2-vim
     pkgs.websocat
-    pkgs.gost
     pkgs.cloudflared
-    pkgs.codeql
     pkgs.aria
     pkgs.gef
     pkgs.ghidra
     pkgs.radare2
-    pkgs.remmina
-    pkgs.gajim
-    pkgs.pan
     pkgs.imagemagick
+    pkgs.p7zip
+    pkgs.rlwrap
   ];
 
   home.file = {
