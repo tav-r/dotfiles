@@ -77,3 +77,5 @@ export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH:$HOME/.local/bin
 export XDG_DATA_DIRS=~/.nix-profile/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 export _JAVA_AWT_WM_NONREPARENTING="1"
+
+[ -f "/home/tav/.ghcup/env" ] && source "/home/tav/.ghcup/env" # ghcup-env
