@@ -1,26 +1,26 @@
 [colors.bright]
 black = "0x414166"
-blue = "0x9bb3d3"
-cyan = "0x9cd8d8"
-green = "0xb3d987"
-magenta = "0xffa1ff"
-red = "0xff8d8d"
+blue = "0x66ccff"  # Brighter soft blue
+cyan = "0x66ffff"  # Brighter soft cyan
+green = "0x66ffad"  # Brighter soft green
+magenta = "0xff66ff"  # Brighter soft magenta
+red = "0xff6699"  # Brighter soft pink
 white = "0xffffff"
-yellow = "0xffc57f"
+yellow = "0xffcc66"  # Brighter soft yellow
 
 [colors.normal]
 black = "0x2c2c3d"
-blue = "0x70a7d4"
-cyan = "0x96e0e0"
-green = "0x9ec875"
-magenta = "0xd291e0"
-red = "0xff6e6e"
-white = "0xd8dee9"
-yellow = "0xffa759"
+blue = "0x3399ff"  # Soft blue
+cyan = "0x33cccc"  # Soft cyan
+green = "0x33cc85"  # Soft green
+magenta = "0xcc33cc"  # Soft magenta
+red = "0xff3366"  # Soft pink
+white = "0xd8dee9"  # Kept the same as your original config
+yellow = "0xffaa00"  # Soft yellow
 
 [colors.primary]
-background = "0x0c0c16"
-foreground = "0xd8dee9"
+background = "0x0c0c16"  # Kept the same as your original config
+foreground = "0xd8dee9"  # Kept the same as your original config
 
 [env]
 TERM = "xterm-256color"

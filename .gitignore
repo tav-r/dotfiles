@@ -1,0 +1,14 @@
+.config/*
+!.config/alacritty-day.toml
+!.config/alacritty-ubuntu.toml
+!.config/assets
+!.config/containers
+!.config/fontconfig
+!.config/helix
+!.config/rofi
+!.config/starship.toml
+!.config/sway
+!.config/waybar
+!.config/alacritty-night.toml
+!.config/alacritty.toml
+!.config/alacritty-admin.toml

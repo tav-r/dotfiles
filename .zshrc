@@ -13,7 +13,7 @@ prompt walters
 
 # alias:target:condition
 ALIASES=(
-    'ls:eza -l --sort=time:exa'
+    'ls:exa -l --sort=time:exa'
     'cat:bat:bat'
     'docker:podman:podman'
     'docker-compose:podman-compose:podman-compose'
