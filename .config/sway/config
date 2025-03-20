@@ -190,7 +190,7 @@ bindsym Control+Alt+Shift+u exec wl-paste | python -c "import urllib.parse; prin
 
 bindsym $mod+Shift+s sticky toggle
 
-bindsym Print exec grim
+bindsym Print exec bash -c 'export DEST="$(mktemp --suffix png)"; slurp | grim -g - "$DEST" && cat "$DEST" | wl-copy' 
 
 include /etc/sway/config.d/*
 
