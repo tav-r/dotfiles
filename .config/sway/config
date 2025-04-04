@@ -6,11 +6,8 @@ set $up k
 set $right l
 set $lock swaylock --image $HOME/.config/sway/assets/wp.jpg
 set $archterm alacritty -e distrobox enter archlinux
-# set $term kitty -c $HOME/.config/kitty/kitty.conf distrobox enter archlinux
-set $term alacritty --config-file $HOME/.config/alacritty-admin.toml
-# set $adminterm kitty -c $HOME/.config/kitty/kitty-admin.conf
+set $term alacritty --config-file $HOME/.config/alacritty.toml
 set $ubuntuterm alacritty --config-file $HOME/.config/alacritty-ubuntu.toml -e distrobox enter ubuntu-latest
-# set $ubuntuterm kitty -c $HOME/.config/kitty/kitty-ubuntu.conf distrobox enter ubuntu
 set $menu 'PATH=/home/tav/.nix-profile/bin:/home/tav/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/home/tav/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/lib/jvm/default/bin rofi -combi-modi window,run -show combi -theme .config/rofi/launcher.rasi'
 set $day ln -sf ~/.config/sway/assets/wp-day.jpg ~/.config/sway/assets/wp.jpg && ln -sf ~/.config/waybar/style-day.css ~/.config/waybar/style.css && ln -sf ~/.config/alacritty-day.toml ~/.config/alacritty.toml && swaymsg "reload"
 # set $day ln -sf ~/.config/sway/assets/wp-day.jpg ~/.config/sway/assets/wp.jpg && ln -sf ~/.config/waybar/style-day.css ~/.config/waybar/style.css && ln -sf ~/.config/kitty/kitty-day.conf ~/.config/kitty/kitty.conf && swaymsg "reload"

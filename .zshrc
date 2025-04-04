@@ -72,7 +72,7 @@ if which zoxide > /dev/null; then
 fi
 
 export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH:$HOME/.local/bin
+export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH:$HOME/.local/bin:$HOME/.idris2/bin
 export XDG_DATA_DIRS=~/.nix-profile/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 export _JAVA_AWT_WM_NONREPARENTING="1"
