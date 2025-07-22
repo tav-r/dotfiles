@@ -20,6 +20,7 @@ ALIASES=(
     'diff:diff --color=auto:diff'
     'mip:dig @ns1-1.akamaitech.net ANY whoami.akamai.net +short:dig'
     'config:/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME:git'
+    'jscopy:jssearch | wl-copy:jssearch'
 )
 
 for al in ${ALIASES[*]}; do
