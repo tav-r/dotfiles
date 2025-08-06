@@ -86,4 +86,4 @@ export _JAVA_AWT_WM_NONREPARENTING="1"
 [ -f ~/.aliases.sh ] && source ~/.aliases.sh
 
 # this somehow became necessary, no idea why
-bindkey '^[.' insert-last-word
+bindkey -e
