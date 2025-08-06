@@ -21,6 +21,8 @@ ALIASES=(
     'mip:dig @ns1-1.akamaitech.net ANY whoami.akamai.net +short:dig'
     'config:/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME:git'
     'jscopy:jssearch | wl-copy:jssearch'
+    'wlc:wl-copy:wl-copy'
+    'wlp:wl-paste:wl-paste'
 )
 
 for al in ${ALIASES[*]}; do
@@ -73,9 +75,15 @@ if which zoxide > /dev/null; then
 fi
 
 export GOPATH=$HOME/go
+export EDITOR=vim
 export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH:$HOME/.local/bin:$HOME/.idris2/bin:$HOME/.bin
 export XDG_DATA_DIRS=~/.nix-profile/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 export _JAVA_AWT_WM_NONREPARENTING="1"
 
 [ -f "/home/tav/.ghcup/env" ] && source "/home/tav/.ghcup/env" # ghcup-env
+
+[ -f ~/.aliases.sh ] && source ~/.aliases.sh
+
+# this somehow became necessary, no idea why
+bindkey '^[.' insert-last-word
