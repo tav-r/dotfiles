@@ -1,20 +1,16 @@
-set $background ~/.config/sway/assets/wp.jpg
+set $background ~/.config/sway/assets/wp2.gif
 set $mod Mod4
 set $left h
 set $down j
 set $up k
 set $right l
-set $lock swaylock --image $HOME/.config/sway/assets/wp.jpg
+set $lock grim /tmp/sc.png && ffmpeg -i /tmp/sc.png -vf "gblur=sigma=20:steps=2" -q:v 2 -y /tmp/sc_m.png && swaylock --image /tmp/sc_m.png 
 set $archterm alacritty -e distrobox enter archlinux
 set $term alacritty --config-file $HOME/.config/alacritty.toml
 set $ubuntuterm alacritty --config-file $HOME/.config/alacritty-ubuntu.toml -e distrobox enter ubuntu-latest
 set $menu 'PATH=/home/tav/.nix-profile/bin:/home/tav/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/home/tav/.local/share/flatpak/exports/bin:/var/lib/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/usr/lib/jvm/default/bin rofi -combi-modi window,run -show combi -theme .config/rofi/launcher.rasi'
-set $day ln -sf ~/.config/sway/assets/wp-day.jpg ~/.config/sway/assets/wp.jpg && ln -sf ~/.config/waybar/style-day.css ~/.config/waybar/style.css && ln -sf ~/.config/alacritty-day.toml ~/.config/alacritty.toml && swaymsg "reload"
-# set $day ln -sf ~/.config/sway/assets/wp-day.jpg ~/.config/sway/assets/wp.jpg && ln -sf ~/.config/waybar/style-day.css ~/.config/waybar/style.css && ln -sf ~/.config/kitty/kitty-day.conf ~/.config/kitty/kitty.conf && swaymsg "reload"
-set $night ln -sf ~/.config/sway/assets/wp-night.jpg ~/.config/sway/assets/wp.jpg && ln -sf ~/.config/waybar/style-night.css ~/.config/waybar/style.css && ln -sf ~/.config/alacritty-night.toml ~/.config/alacritty.toml && swaymsg "reload"
-# set $night ln -sf ~/.config/sway/assets/wp-night.jpg ~/.config/sway/assets/wp.jpg && ln -sf ~/.config/waybar/style-night.css ~/.config/waybar/style.css && ln -sf ~/.config/kitty/kitty-night.conf ~/.config/kitty/kitty.conf && swaymsg "reload"
 
-output * bg $background fill
+#output * bg $background fill
 input * {
     dwt enabled
     tap enabled
@@ -178,16 +174,17 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86Search exec $menu
 
-bindsym $mod+Shift+d exec $day
-bindsym $mod+Shift+n exec $night
 bindsym Control+Alt+b exec wl-paste | base64 | tr -d '\n' | wl-copy
 bindsym Control+Alt+Shift+b exec wl-paste | base64 -d | tr -d '\n' | wl-copy
 bindsym Control+Alt+u exec wl-paste | python -c "import urllib.parse; print(urllib.parse.quote(input()), end='')" | tr -d '\n' | wl-copy
 bindsym Control+Alt+Shift+u exec wl-paste | python -c "import urllib.parse; print(urllib.parse.unquote(input()), end='')" | tr -d '\n' | wl-copy
+bindsym $mod+Shift+n exec swww img $background --transition-type none --transition-fps 30 --transition-duration 0
 
 bindsym $mod+Shift+s sticky toggle
 
 bindsym Print exec bash -c 'export DEST="$(mktemp --suffix png)"; slurp | grim -g - "$DEST" && cat "$DEST" | wl-copy' 
 
-include /etc/sway/config.d/*
+exec_always swww-daemon --format bgr
+exec_always swww img $background --transition-type none --transition-fps 30 --transition-duration 0
 
+include /etc/sway/config.d/*

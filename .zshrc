@@ -45,6 +45,7 @@ fzf-history() {
     CURSOR=$#BUFFER
 }
 
+bindkey -e
 zle -N fzf-history
 if which fzf > /dev/null; then
     bindkey "^R" fzf-history
@@ -86,4 +87,3 @@ export _JAVA_AWT_WM_NONREPARENTING="1"
 [ -f ~/.aliases.sh ] && source ~/.aliases.sh
 
 # this somehow became necessary, no idea why
-bindkey -e
